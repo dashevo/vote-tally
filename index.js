@@ -1,9 +1,9 @@
 const dashcore = require('@dashevo/dashcore-lib');
 
-// List of votes from DTE api (/validVotes route).
+// List of votes from vote-collector api (/validVotes route).
 const votes = require('./data/votes.json');
 
-// Candidates list from DashWatch, same json file from DTE app.
+// Candidates list from DashWatch, same json file from website
 const candidateList = require('./data/candidates.json');
 
 const buildValidCandidateIDMap = () => {
@@ -17,6 +17,7 @@ const buildValidCandidateIDMap = () => {
 // dash-cli masternodelist json 'ENABLED' > mnlist.json
 const mnSnapshot = require('./data/mnlist.json');
 
+// dte2019 = "Dash Trust Elections 2019"
 const voteMsgPrefix = 'dte2019-';
 const re = new RegExp(`^${voteMsgPrefix}`);
 
