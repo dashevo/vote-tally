@@ -55,12 +55,14 @@ const tallyVotes = () => {
   });
 
   votes.forEach(vote => {
-    // TODO: log entire vote so we know which one if discarded
-    // console.log(`${vote}`);
+    // log entire vote so we know which one if discarded
+    console.log(`${vote}`);
 
-    // TODO: duplicate MNO collateral addresses
+    // duplicate MNO collateral addresses
     if (seenCollateral[vote.addr] !== undefined) {
       // go crazy here. invalid dataset.
+      console.log("error: invalid dataset - duplicate collateral addresses detected")
+      process.exit(1)
     }
     seenCollateral[vote.addr] = 1;
 
