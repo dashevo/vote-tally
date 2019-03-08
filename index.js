@@ -88,8 +88,7 @@ const tallyVotes = () => {
     let candidateVoteStr = vote.msg.split(re)[1];
 
     // 3. Verify the signature matches the message.
-    // TODO: Get network from environment
-    let isValidAddr = dashcore.Address.isValid(vote.addr, 'testnet');
+    let isValidAddr = dashcore.Address.isValid(vote.addr, process.env.DASH_NETWORK);
     if (isValidAddr === false) {
       console.log(`Address ${vote.addr} is not valid -- vote discarded.`);
       return;
@@ -151,11 +150,33 @@ const tamperGuard = (voteList, candidateIDMap) => {
   return true;
 };
 
+envCheck = () => {
+  const reqd = ["DASH_NETWORK"];
+  let missing = false
+  for (let i = 0; i < reqd.length; ++i) {
+    if (!(reqd[i] in process.env)) {
+      console.error(`error: required env var ${reqd[i]} not set`)
+      missing = true;
+    }
+  }
+  if (missing === true) {
+    process.exit(1);
+  }
+
+  const net = process.env.DASH_NETWORK;
+  if (net !== "testnet" && net !== "mainnet") {
+    console.error(`error: unknown Dash network '${net}'`)
+    console.error(`\texpected \"mainnet\" or \"testnet\"`)
+    process.exit(1);
+  }
+};
+
+// ensure required env vars set
+envCheck();
+
 const tally = tallyVotes();
 console.log(tally);
 //
 // TODO: map user identifiers to names for final presentation (re-use
 // candidates.txt)
 
-// const thing = buildValidCandidateIDMap();
-// console.log(thing);
