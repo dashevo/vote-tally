@@ -56,7 +56,7 @@ const tallyVotes = () => {
 
   votes.forEach(vote => {
     // log entire vote so we know which one if discarded
-    console.log(`${vote}`);
+    console.log(`Vote <addr:${vote.addr}, msg:${vote.msg}, sig:${vote.sig}, ts:${vote.ts}>`);
 
     // duplicate MNO collateral addresses
     if (seenCollateral[vote.addr] !== undefined) {
