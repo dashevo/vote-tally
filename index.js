@@ -185,8 +185,39 @@ envCheck = () => {
 envCheck();
 
 const tally = tallyVotes();
-console.log(tally);
-//
-// TODO: map user identifiers to names for final presentation (re-use
-// candidates.txt)
 
+// Build a lookup table of candidate ids => display names
+const buildDisplayNameMap = () => {
+  let candidateIdMap = {};
+  candidateList.forEach(obj => {
+    let displayName = obj.text;
+    if (obj.alias.length > 0) {
+      displayName += ` - ${obj.alias}`;
+    }
+    candidateIdMap[obj.key] = displayName;
+  });
+  return candidateIdMap;
+};
+
+const displayNames = buildDisplayNameMap();
+
+// Sort the results by vote count and display them
+const counts = {};
+for (let userid in tally) {
+  if (counts[tally[userid]] === undefined) {
+    counts[tally[userid]] = [];
+  }
+  counts[tally[userid]] = [...counts[tally[userid]], userid];
+}
+
+const nums = Object.keys(counts);
+nums.sort((a, b) => b - a);
+
+for (let i in nums) {
+  count = nums[i];
+  for (let j in counts[count]) {
+    let userid = counts[count][j];
+    let name = displayNames[userid];
+    console.log(`${count} - ${name}`);
+  }
+}
