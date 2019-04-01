@@ -32,6 +32,7 @@ const buildValidMNCollateralMap = () => {
   return mnCollateral;
 };
 
+const tooLate = 1554076800;  // 2019-04-01 00:00:00 UTC
 const tallyVotes = () => {
   // List of valid MN collateral addresses which comes from the MN list
   // snapshot.
@@ -65,6 +66,15 @@ const tallyVotes = () => {
       process.exit(1)
     }
     seenCollateral[vote.addr] = 1;
+
+    // 0. Filter votes that came in after March 31st 2019, 23:59
+    let ts = Math.trunc(Date.parse(vote.ts) / 1000);
+    if (ts >= tooLate) {
+      console.log(
+        `Timestamp ${vote.ts} arrived post-deadline (cutoff == ${tooLate - 1}) -- vote discarded.`
+      );
+      return;
+    }
 
     // 1. Verify the vote Dash address is in the valid MN snapshot.
     if (mnCollateralMap[vote.addr] === undefined) {
