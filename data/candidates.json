@@ -1,75 +1,57 @@
 [
   {
+    "alias": "Amanda B. Johnson",
+    "text": "Amanda Johnson",
+    "value": "ajohnson",
+    "key": "ajohnson"
+  },
+  {
     "alias": "Drako",
     "text": "Andrew Kerdemelidis",
     "value": "akerdemelidis",
     "key": "akerdemelidis"
   },
   {
-    "alias": "Ash",
-    "text": "Ashley Francis",
-    "value": "afrancis",
-    "key": "afrancis"
-  },
-  {
-    "alias": "philadashia",
-    "text": "Brian Damian",
-    "value": "bdamian",
-    "key": "bdamian"
-  },
-  {
-    "alias": "DashPay_Chuck",
-    "text": "Charles Williams",
-    "value": "cwilliams",
-    "key": "cwilliams"
+    "alias": "",
+    "text": "Bryan Courchesne",
+    "value": "bcourchesne",
+    "key": "bcourchesne"
   },
   {
     "alias": "kanuuker",
-    "text": "Christopher Webb",
+    "text": "Chris Webb",
     "value": "cwebb",
     "key": "cwebb"
   },
   {
-    "alias": "name3",
-    "text": "Cyrus Tafti",
-    "value": "ctafti",
-    "key": "ctafti"
-  },
-  {
-    "alias": "ec1warc1",
-    "text": "Edward Stoever",
-    "value": "estoever",
-    "key": "estoever"
+    "alias": "",
+    "text": "Cole Allen",
+    "value": "callen",
+    "key": "callen"
   },
   {
     "alias": "",
-    "text": "Eric Sammons",
-    "value": "esammons",
-    "key": "esammons"
+    "text": "Eric Balog",
+    "value": "ebalog",
+    "key": "ebalog"
+  },
+  {
+    "alias": "Unchained",
+    "text": "Hytham Abdel-Karim",
+    "value": "habdelkarim",
+    "key": "habdelkarim"
+  },
+  {
+    "alias": "essra",
+    "text": "Jan Heinrich Meyer",
+    "value": "jhmeyer",
+    "key": "jhmeyer"
   },
   {
     "alias": "",
-    "text": "George Donnelly",
-    "value": "gdonnelly",
-    "key": "gdonnelly"
-  },
-  {
-    "alias": "",
-    "text": "Luke Higgs",
-    "value": "lhiggs",
-    "key": "lhiggs"
-  },
-  {
-    "alias": "",
-    "text": "Mark Mason",
-    "value": "mmason",
-    "key": "mmason"
-  },
-  {
-    "alias": "agnewpickens",
-    "text": "Michael J. Veloff",
-    "value": "mjveloff",
-    "key": "mjveloff"
+    "text": "Matthijs Vogelenzang",
+    "value": "mvogelenzang",
+    "key": "mvogelenzang"
   },
   {
     "alias": "walter",
@@ -78,51 +60,15 @@
     "key": "mlewis"
   },
   {
-    "alias": "ROTC",
-    "text": "Nathaniel Luz",
-    "value": "nluz",
-    "key": "nluz"
-  },
-  {
     "alias": "",
-    "text": "Perry Woodin",
-    "value": "pwoodin",
-    "key": "pwoodin"
+    "text": "Rupan Sarma",
+    "value": "rsarma",
+    "key": "rsarma"
   },
   {
-    "alias": "dutchn0mad",
-    "text": "Pieter Jan Bakhuijzen",
-    "value": "pjbakhuijzen",
-    "key": "pjbakhuijzen"
-  },
-  {
-    "alias": "Arthyron",
-    "text": "Raleigh Barrett",
-    "value": "rbarrett",
-    "key": "rbarrett"
-  },
-  {
-    "alias": "Sidem",
-    "text": "Sinay Demirel",
-    "value": "sdemirel",
-    "key": "sdemirel"
-  },
-  {
-    "alias": "solarguy",
-    "text": "Troy Rhodes",
-    "value": "trhodes",
-    "key": "trhodes"
-  },
-  {
-    "alias": "",
-    "text": "Yang Chen",
-    "value": "ychen",
-    "key": "ychen"
-  },
-  {
-    "alias": "",
-    "text": "Yuriy Novoselskiy",
-    "value": "ynovoselskiy",
-    "key": "ynovoselskiy"
+    "alias": "kodaxx",
+    "text": "Spencer Kuzara",
+    "value": "skuzara",
+    "key": "skuzara"
   }
 ]
